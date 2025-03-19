@@ -20,6 +20,11 @@ variable "machine_pools" {
     control_plane_role        = bool
     etcd_role                 = bool
     worker_role               = bool
+    taints                    = optional(list(object({
+        key = string
+        value = string
+        effect = string
+    })), [])
     quantity                  = number
     machine_config = object({
       kind = string
