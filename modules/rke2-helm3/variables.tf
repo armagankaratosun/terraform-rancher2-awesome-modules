@@ -23,3 +23,7 @@ variable helm3_chart_values {
    type = string
    description = "the cart values that needs to be customized. can be a yaml file."
 }
+variable create_namespace { 
+   type = bool
+   description = "create the namespace if it does not exist."
+}
